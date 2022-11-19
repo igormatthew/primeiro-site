@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.center {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2% 0 8%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu-mobile {
+    display: none;
+}
+
+header {
+    background-color: white;
+    padding: 20px 0;
+    border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+.logo {
+    color: #16507b;
+    margin-top: -2px;
+}
+
+.logo h2 {
+    font-weight: normal;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.menu-desktop {
+    width: 80%;
+    text-align: right;
+}
+
+.menu-desktop a {
+    color: #16507b;
+    font-size: 14px;
+    text-decoration: none;
+    margin-right: 20px;
+    margin-top: 5px;
+    transition: 0.4s;
+    /* Efeito de slow hover, colocar antes do hover. */
+}
+
+.menu-desktop a:hover {
+    color: #007bff;
+}
+
+.menu-desktop .btn-menu {
+    background-color: #007bff;
+    display: inline-block;
+    padding: 6px 12px;
+    color: white;
+    border-radius: 8px;
+
+}
+
+.menu-desktop .btn-menu:hover {
+    background-color: #16507b;
+    color: white;
+}
+
+/* Section Main */
+
+section.main {
+    background-image: url(../img/white-abstract.webp);
+    /* min-height: 800px; */
+    padding: 70px 0px 140px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Efeito Parallax */
+}
+
+.main_cta {
+    width: 100%;
+    margin: 60px 50px 60px 20px;
+    text-align: center;
+}
+
+.main_cta h3 {
+    color: gray;
+    font-size: 25px;
+}
+
+.main_cta h2 {
+    color: #16507b;
+    font-size: 40px;
+}
+
+.main_cta button {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 30px 0;
+    margin-inline: 10px 10px;
+    color: white;
+    border-radius: 8px;
+    font-size: 15px;
+    border: 0;
+    cursor: pointer;
+    /* Para que cursos fique como "clicável" ao passar o mouse em cima do botão*/
+    transition: 0.4s;
+    /* Efeito de slow hover, colocar antes do hover. */
+}
+
+.main_cta button:hover {
+    background-color: #16507b;
+    color: white;
+}
+
+.bt1 {
+    background-color: #007bff;
+}
+
+.bt2 {
+    background-color: grey;
+}
+
+.diferenciais {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.diferencial-single {
+    border-radius: 10px;
+    background-color: white;
+    width: 23%;
+    margin-right: 2%;
+    padding: 50px 20px;
+}
+
+.diferencial-single i {
+    color: #124265;
+    font-size: 23px;
+}
+
+.diferencial-single h2 {
+    color: #124265;
+    margin: 10px 0;
+    font-size: 17px;
+}
+
+.diferencial-single p {
+    color: gray;
+    font-size: 14px;
+    line-height: 30px;
+    /* Espeçamento entre as linhas do texto */
+}
+
+section.sobre {
+    padding: 80px 0;
+    justify-content: center;
+
+}
+
+.chamada-sobre {
+    width: 100%;
+    text-align: center;
+
+}
+
+.chamada-sobre h2 {
+    color: #124265;
+    text-transform: uppercase;
+}
+
+.chamada-sobre p {
+    font-size: 14x;
+    color: gray;
+    margin: 10px 0;
+}
+
+.conteudo-sobre {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.conteudo-sobre p {
+    width: 48%;
+    margin-right: 2%;
+    color: #444444;
+}
+
+.conteudo-sobre span {
+    display: inline-block;
+    width: 100%;
+    margin-top: 30px;
+
+}
+
+.conteudo-sobre i {
+    color: #007bff;
+}
+
+section.conquistas {
+    background-color: #f8fbfe;
+    padding: 50px 0;
+}
+
+.conquista-single {
+    width: 22%;
+    margin-right: 3%;
+    text-align: center;
+    color: #124265;
+}
+
+.conquista-single h2 {
+    font-size: 30px;
+}
+
+.conquista-single img {
+    padding: 0px 0px 0px 30px;
+    max-width: 100%;
+    filter: grayscale(100%);
+    /* Propriedade do CSS3 para deixar a imagem/logo cinza. */
+    transition: 1s;
+}
+
+.conquista-single img:hover {
+    filter: grayscale(0%);
+    /* Propriedade do CSS3 para remover o cinza da imagem/logo. */
+    transform: scale(1.3, 1.3);
+    /* Propriedade do CSS3 para animar a(o) imagem/ícone dandoum destaque crescendo. */
+}
+
+.sociais {
+    width: 16%;
+    margin-right: 9%;
+}
+
+.menu-items {
+    position: absolute;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    border-bottom: 2px solid #16507b;
+    display: block;
+    opacity: 0;
+    transition: 1s;
+}
+
+.menu-items.show {
+    opacity: 1;
+}
+
+.menu-items.hide {
+    opacity: 0;
+}
+
+.menu-items a {
+    display: block;
+    text-decoration: none;
+    color: #16507b;
+}
+
+section.sobre-extra {
+    padding: 80px 0;
+}
+
+.sobre-extra-foto {
+    width: 50%;
+
+}
+
+.sobre-extra-foto img {
+    max-width: 100%;
+}
+
+.sobre-extra-content {
+    width: 50%;
+    padding: 0 50px;
+}
+
+.sobre-extra-content h2 {
+    color: #124265;
+    margin-bottom: 20px;
+}
+
+.sobre-extra-content p {
+    color: #444444;
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+section.rodape {
+    padding: 30px 30px;
+    background-color: white;
+    border-top: 1px solid rgb(200, 200, 200);
+}
+
+.contato {
+    color: #16507b;
+    width: 70%;
+}
+
+.rights {
+    color: gray;
+    font-size: 15px;
+    text-align: center;
+    width: 30%;
+    margin-top: 30px;
+}
+
+
+/*CSS Responsivo*/
+@media screen and (max-width: 768px) {
+    .diferencial-single {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .conteudo-sobre p {
+        width: 100%;
+        margin: 20px 20px;
+    }
+
+    .menu-desktop {
+        display: none;
+    }
+
+    .logo {
+        width: 20%;
+    }
+
+    .menu-mobile {
+        width: 80%;
+        text-align: right;
+        display: block;
+    }
+
+    .menu-mobile i {
+        cursor: pointer;
+        font-size: 23px;
+        margin-top: 10px;
+    }
+
+
+    .contato {
+        width: 100%;
+    }
+
+    .rights {
+        width: 100%;
+    }
+
+    .sobre-extra-foto {
+        object-fit: scale-down;
+        /*Permite que a imagem mantenha a sua escala quando for reduzida na tela responsiva. */
+    }
+}
